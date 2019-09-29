@@ -445,7 +445,7 @@ void jit_print_queue(struct jit_queue_s *queue, bool show_all, int debug_level) 
     int loop_end;
 
     if (jit_queue_is_empty(queue)) {
-        MSG_DEBUG(debug_level, "INFO: [jit] queue is empty\n");
+         /* MSG_DEBUG(debug_level, "INFO: [jit] queue is empty\n"); */
     } else {
         pthread_mutex_lock(&mx_jit_queue);
 
