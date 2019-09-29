@@ -1369,7 +1369,8 @@ int main(void)
         pthread_mutex_lock(&mx_concent);
         i = lgw_get_trigcnt(&trig_tstamp);
         
-        /* pthread_mutex_unlock(&mx_concent);
+        pthread_mutex_unlock(&mx_concent);
+        /*
         if (i != LGW_HAL_SUCCESS) {
             printf("# SX1301 time (PPS): unknown\n");
         } else {
@@ -2220,7 +2221,7 @@ void thread_down(void) {
                         pthread_mutex_lock(&mx_meas_dw);
                         meas_dw_ack_rcv += 1;
                         pthread_mutex_unlock(&mx_meas_dw);
-                        MSG("INFO: [down] PULL_ACK received in %i ms\n", (int)(1000 * difftimespec(recv_time, send_time)));
+                        /* MSG("INFO: [down] PULL_ACK received in %i ms\n", (int)(1000 * difftimespec(recv_time, send_time))); */
                     }
                 } else { /* out-of-sync token */
                     MSG("INFO: [down] received out-of-sync ACK\n");
