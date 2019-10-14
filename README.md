@@ -20,6 +20,6 @@ docker run \
     arribada/packet-forwarder
 ```
 
-[PiSupply Rak833 hat config file](https://uk.pi-supply.com/products/iot-lora-gateway-hat-for-raspberry-pi?_pos=6&_sid=770be1c90&_ss=r) for the EU settings.<br/>
+[PiSupply Rak833 hat config file](https://github.com/brocaar/lora-gateway-os/blob/v3.0.0test2/layers/targets/meta-raspberrypi/recipes-lora/lora-packet-forwarder/lora-packet-forwarder/pislora/global_conf.eu868.json) for the EU settings.<br/>
 
 Other config files for the PiSupply hat can be copied from the [lora-gateway-os repo](https://github.com/brocaar/lora-gateway-os/tree/v3.0.0test2/layers/targets/meta-raspberrypi/recipes-lora/lora-packet-forwarder/lora-packet-forwarder/pislora).
