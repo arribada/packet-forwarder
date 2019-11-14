@@ -1850,7 +1850,7 @@ void thread_up(void) {
         ++buff_index;
         buff_up[buff_index] = 0; /* add string terminator, for safety */
 
-        /* printf("\nJSON up: %s\n", (char *)(buff_up + 12));  DEBUG: display JSON payload */
+        printf("\nJSON up: %s\n", (char *)(buff_up + 12));  // DEBUG: display JSON payload
 
         /* send datagram to server */
         send(sock_up, (void *)buff_up, buff_index, 0);
@@ -2231,7 +2231,7 @@ void thread_down(void) {
 
             /* the datagram is a PULL_RESP */
             buff_down[msg_len] = 0; /* add string terminator, just to be safe */
-            MSG("INFO: [down] PULL_RESP received  - token[%d:%d] :)\n", buff_down[1], buff_down[2]); /* very verbose */
+            // MSG("INFO: [down] PULL_RESP received  - token[%d:%d] :)\n", buff_down[1], buff_down[2]); /* very verbose */
             printf("\nJSON down: %s\n", (char *)(buff_down + 4)); /* DEBUG: display JSON payload */
 
             /* initialize TX struct and try to parse JSON */
